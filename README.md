@@ -23,7 +23,7 @@ The request body should contain the following fields:
 
 ```http
 POST /user/register HTTP/1.1
-Host: localhost:3000
+Host:https://food-delivery-2gec.onrender.com/
 Content-Type: application/json
 
 {
