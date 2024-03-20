@@ -5,6 +5,7 @@ const bcrypt=require("bcrypt");
 
 const {connection}=require("./db")
 const {Userrouter}=require("./routes/userRoutes")
+const {RestaurantRoute}=require("./routes/restaurantRoute")
 
 
 const app=express();
@@ -13,7 +14,7 @@ app.use(express.json());
 
 
 app.use("/user",Userrouter)
-
+app.use("/restaurant",RestaurantRoute)
 
 app.get("/",(req,res)=>{
     res.send("this is home page of our website");
