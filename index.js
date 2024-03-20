@@ -4,6 +4,7 @@ const jwt=require("jsonwebtoken");
 const bcrypt=require("bcrypt");
 
 const {connection}=require("./db")
+const {Userrouter}=require("./routes/userRoutes")
 
 
 const app=express();
@@ -11,12 +12,13 @@ const app=express();
 app.use(express.json());
 
 
-
+app.use("/user",Userrouter)
 
 
 app.get("/",(req,res)=>{
     res.send("this is home page of our website");
 })
+
 
 
 app.listen(3000,async(req,res)=>{
