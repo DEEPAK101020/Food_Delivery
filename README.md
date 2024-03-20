@@ -128,6 +128,51 @@ Content-Type: application/json
   ]
 }
 
+```https://food-delivery-2gec.onrender.com/restaurant/restaurants
+
+This endpoint makes an HTTP GET request to retrieve a list of restaurants. The response will be in JSON format with an array of restaurant objects, each containing the address, restaurant ID, name, and menu items. The address object includes street, city, state, country, and zip code. The menu array includes the name, description, price, and image of each menu item.
+
+https://food-delivery-2gec.onrender.com/restaurant/restaurants/:id
+
+This endpoint makes an HTTP GET request to retrieve details of a specific restaurant by its ID. The response will have a status code of 200, indicating a successful request, and the data will be in JSON format. The response will include the address, ID, name, and menu of the restaurant, along with a version identifier. The address will have fields for street, city, state, country, and zip code, while the menu will consist of items with their name, description, price, image, and ID.
+
+## Retrieve Menu of a Specific Restaurant
+
+This endpoint retrieves the menu of a specific restaurant identified by its ID. The response will contain an array of menu items, where each item includes the name, description, price, image, and ID.
+```
+
+### Endpoint
+
+`GET /restaurant/restaurants/:id/menu`
+
+- `:id` (string, required): The ID of the specific restaurant.
+
+### Example Response
+
+```json
+[
+    {
+        "name": "Burger",
+        "description": "Juicy beef burger with lettuce and tomato",
+        "price": 9.99,
+        "image": "burger.jpg",
+        "_id": "605cd65b82111f1234567890"
+    },
+    {
+        "name": "Pizza",
+        "description": "Delicious pizza with various toppings",
+        "price": 12.99,
+        "image": "pizza.jpg",
+        "_id": "605cd65b82111f1234567891"
+    },
+    {
+        "name": "Salad",
+        "description": "Fresh garden salad with vinaigrette dressing",
+        "price": 7.99,
+        "image": "salad.jpg",
+        "_id": "605cd65b82111f1234567892"
+    }
+]
 
 
 
