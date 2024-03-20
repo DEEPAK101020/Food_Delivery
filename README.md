@@ -38,3 +38,32 @@ Content-Type: application/json
     "zip": "12345"
   }
 }
+```
+
+## User Login
+
+This endpoint allows users to log in by providing their email and password.
+
+### Request Body
+
+The request body should contain the following fields:
+
+- `email` (string, required): The email of the user.
+- `password` (string, required): The password of the user.
+
+### Endpoint
+
+`POST /user/login`
+
+### Example
+
+```http
+POST /user/login HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "password123"
+}
+
