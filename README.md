@@ -1,3 +1,22 @@
+### Available Endpoints
+
+#### GET
+- */api/restaurants:* Retrieves a list of all available restaurants.
+- */api/restaurants/:id:* Retrieves the details of a specific restaurant by its ID.
+- */api/restaurants/:id/menu:* Retrieves the menu of a specific restaurant by its ID.
+
+#### POST
+- */api/restaurants:* Adds a new restaurant to the system.
+- */api/restaurants/:id/menu:* Adds a new menu item to a specific restaurant by its ID.
+- */api/orders:* Allows the user to place an order.
+
+#### DELETE
+- */api/restaurants/:id/menu/:menuID:* Deletes a particular menu item from a specific restaurant.
+
+#### PUT / PATCH
+- */api/orders/:id:* Updates the status of a specific order by its ID.
+
+
 ## Register User
 
 This endpoint allows the client to register a new user.
